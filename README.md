@@ -6,6 +6,25 @@ Built with **React.js**, **Node.js**, and **Express.js**, this platform showcase
 
 ---
 
+# 🌐 Live Deployment
+
+| | URL |
+|---|---|
+| **Frontend** | https://startupclub-website.vercel.app |
+| **Backend API** | https://startupclub-backend.vercel.app |
+
+### Verify Backend is Running
+
+Open these URLs directly in your browser to confirm the backend is live:
+
+| Endpoint | URL | Expected Response |
+|---|---|---|
+| Health Check | https://startupclub-backend.vercel.app/health | `{"status":"OK","message":"StartUp Club API is running!"}` |
+| Events API | https://startupclub-backend.vercel.app/api/events | JSON array of all events |
+| Stats API | https://startupclub-backend.vercel.app/api/stats | JSON with club statistics |
+
+---
+
 # 📸 Features
 
 ## ✅ Core Features
@@ -34,7 +53,7 @@ Built with **React.js**, **Node.js**, and **Express.js**, this platform showcase
 - 📧 Newsletter subscription API
 - ⚡ Smooth scrolling navigation
 - ♿ Accessibility support
-- 🌐 Vercel deployment ready
+- 🌐 Deployed on Vercel (frontend + backend separately)
 
 ---
 
@@ -57,12 +76,15 @@ Built with **React.js**, **Node.js**, and **Express.js**, this platform showcase
 ```plaintext
 startupvit-website/
 ├── backend/
-│   ├── .env                                ← Environment variables
+│   ├── data/
+│   │   └── events.json                     ← Seed data for events
+│   ├── routes/
+│   │   └── api.js                          ← API routes for frontend communication
+│   ├── utils/
+│   │   └── fileStorage.js                  ← File/memory storage utility
 │   ├── server.js                           ← Main backend server file
-│   ├── package.json                        ← Backend dependencies and scripts
-│   │
-│   └── routes/
-│       └── api.js                          ← API routes for frontend communication
+│   ├── vercel.json                         ← Backend Vercel deployment config
+│   └── package.json                        ← Backend dependencies and scripts
 │
 ├── frontend/
 │   ├── public/
@@ -77,59 +99,34 @@ startupvit-website/
 │   │   │   └── ThemeContext.js             ← Dark/Light theme management
 │   │   │
 │   │   ├── components/
-│   │   │   ├── Navbar.js                   ← Navigation bar component
-│   │   │   ├── Navbar.css                  ← Navbar styling
-│   │   │   │
-│   │   │   ├── Hero.js                     ← Hero section component
-│   │   │   ├── Hero.css                    ← Hero section styling
-│   │   │   │
-│   │   │   ├── About.js                    ← About section
-│   │   │   ├── About.css                   ← About section styling
-│   │   │   │
-│   │   │   ├── Stats.js                    ← Statistics section
-│   │   │   ├── Stats.css                   ← Statistics styling
-│   │   │   │
-│   │   │   ├── Events.js                   ← Events section with API integration
-│   │   │   ├── Events.css                  ← Events styling
-│   │   │   │
-│   │   │   ├── Team.js                     ← Team members section
-│   │   │   ├── Team.css                    ← Team section styling
-│   │   │   │
-│   │   │   ├── Testimonials.js             ← Testimonials carousel
-│   │   │   ├── Testimonials.css            ← Testimonials styling
-│   │   │   │
-│   │   │   ├── Contact.js                  ← Contact form with backend integration
-│   │   │   ├── Contact.css                 ← Contact section styling
-│   │   │   │
-│   │   │   ├── ThemeToggle.js              ← Dark/Light mode toggle
-│   │   │   ├── ThemeToggle.css             ← Theme toggle styling
-│   │   │   │
-│   │   │   ├── Footer.js                   ← Footer with newsletter API
-│   │   │   └── Footer.css                  ← Footer styling
+│   │   │   ├── Navbar.js / Navbar.css
+│   │   │   ├── Hero.js / Hero.css
+│   │   │   ├── About.js / About.css
+│   │   │   ├── Stats.js / Stats.css
+│   │   │   ├── Events.js / Events.css
+│   │   │   ├── Team.js / Team.css
+│   │   │   ├── Testimonials.js / Testimonials.css
+│   │   │   ├── Contact.js / Contact.css
+│   │   │   ├── ThemeToggle.js / ThemeToggle.css
+│   │   │   └── Footer.js / Footer.css
 │   │   │
 │   │   └── assets/
-│   │       └── images/                     ← Images and media assets
+│   │       └── images/
 │   │
-│   ├── package.json                        ← Frontend dependencies and scripts
-│   └── README.md                           ← Frontend-specific instructions
+│   └── package.json                        ← Frontend dependencies and scripts
 │
-├── .gitignore                              ← Git ignored files
-├── vercel.json                             ← Vercel deployment configuration
-└── README.md                               ← Main project documentation
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-# 🚀 Getting Started
+# 🚀 Getting Started (Local Development)
 
 ## 📋 Prerequisites
 
-Make sure you have installed:
-
 - Node.js >= 16.x
 - npm >= 8.x
-
-Check versions:
 
 ```bash
 node -v
@@ -138,27 +135,23 @@ npm -v
 
 ---
 
-# 📥 Installation
+## 📥 Installation
 
-## 1️⃣ Clone Repository
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/startupvit-website.git
-cd startupvit-website
+git clone https://github.com/Bithika-Jain/startupclub-website.git
+cd startupclub-website
 ```
 
----
-
-## 2️⃣ Install Backend Dependencies
+### 2️⃣ Install Backend Dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
----
-
-## 3️⃣ Install Frontend Dependencies
+### 3️⃣ Install Frontend Dependencies
 
 ```bash
 cd ../frontend
@@ -167,11 +160,9 @@ npm install
 
 ---
 
-# ⚙️ Environment Variables
+## ⚙️ Environment Variables
 
-Create a `.env` file inside the `backend` folder.
-
-Example:
+Create a `.env` file inside the `backend` folder:
 
 ```env
 PORT=5000
@@ -179,39 +170,25 @@ PORT=5000
 
 ---
 
-# ▶️ Running the Project
+## ▶️ Running Locally
 
-## Start Backend Server
-
-Open terminal inside backend folder:
+### Start Backend
 
 ```bash
 cd backend
 npm run dev
 ```
 
-Backend runs on:
+Backend runs on: `http://localhost:5000`
 
-```plaintext
-http://localhost:5000
-```
-
----
-
-## Start Frontend Server
-
-Open another terminal:
+### Start Frontend
 
 ```bash
 cd frontend
 npm start
 ```
 
-Frontend runs on:
-
-```plaintext
-http://localhost:3000
-```
+Frontend runs on: `http://localhost:3000`
 
 ---
 
@@ -219,26 +196,47 @@ http://localhost:3000
 
 | Method | Endpoint | Description |
 |---|---|---|
+| GET | /health | Backend health check |
 | GET | /api/events | Fetch all events |
-| GET | /api/team | Fetch team members |
+| GET | /api/events/:id | Fetch single event |
 | GET | /api/stats | Fetch club statistics |
 | POST | /api/contact | Submit contact form |
 | POST | /api/newsletter | Newsletter subscription |
-| GET | /health | Backend health check |
+| GET | /api/messages | View all contact messages |
+| GET | /api/newsletter/subscribers | View all subscribers |
 
 ---
 
 # 🔗 Backend Integration
 
-The frontend communicates with the backend using **Axios**.
-
-Example:
+The frontend communicates with the backend using **Axios**:
 
 ```javascript
 axios.get('/api/events')
 axios.post('/api/contact', formData)
 axios.post('/api/newsletter', emailData)
 ```
+
+---
+
+# 🌐 Deployment (Vercel)
+
+This project is deployed as **two separate Vercel projects** for reliability.
+
+### Backend Deployment
+
+- Root Directory: `backend`
+- Framework: Other
+- The `backend/vercel.json` handles routing all requests to `server.js`
+
+### Frontend Deployment
+
+- Root Directory: `frontend`
+- Framework: Create React App
+- Environment Variables:
+  - `CI=false`
+  - `GENERATE_SOURCEMAP=false`
+  - `REACT_APP_API_URL=https://startupclub-backend.vercel.app`
 
 ---
 
@@ -250,16 +248,12 @@ axios.post('/api/newsletter', emailData)
 - Accent Colors: Neon Blue, Purple
 - Dark Theme Support
 
----
-
 ## Typography
 
 | Usage | Font |
 |---|---|
 | Headings | Space Grotesk |
 | Body Text | Inter |
-
----
 
 ## Design Features
 
@@ -283,53 +277,9 @@ axios.post('/api/newsletter', emailData)
 
 ---
 
-# 🌐 Deployment
-
-## Deploy on Vercel
-
-### Step 1
-
-Push project to GitHub.
-
-### Step 2
-
-Go to:
-
-```plaintext
-https://vercel.com
-```
-
-### Step 3
-
-Import GitHub repository.
-
-### Step 4
-
-Click Deploy.
-
----
-
-# 📦 Build Commands
-
-## Frontend Build
-
-```bash
-npm run build
-```
-
-## Backend Start
-
-```bash
-npm run dev
-```
-
----
-
 ## 📝 Note on Data Persistence
 
-The backend uses JSON file storage which works perfectly in local development.
-On Vercel (serverless), file writes are ephemeral. For production with persistent
-data, integrate MongoDB Atlas or similar (planned enhancement).
+The backend uses JSON file storage which works perfectly in local development. On Vercel (serverless), file writes are ephemeral — contact form submissions and newsletter signups are stored in memory per instance. For persistent production storage, MongoDB Atlas integration is planned.
 
 ---
 
@@ -360,6 +310,3 @@ This project is licensed under the MIT License.
 - React Icons
 - StartUp Club @VIT Bhopal Community
 - VIT Bhopal University
-
----
-
