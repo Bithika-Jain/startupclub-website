@@ -1,0 +1,74 @@
+[
+  {
+    "id": "evt-001",
+    "title": "Startup Weekend 2025",
+    "category": "hackathon",
+    "date": "2026-08-15",
+    "location": "VIT Main Auditorium",
+    "attendees": 200,
+    "description": "54-hour event where developers, designers, and business enthusiasts come together to build startups from scratch.",
+    "image": "🚀",
+    "status": "upcoming",
+    "tags": ["Hackathon", "Networking", "Prizes"]
+  },
+  {
+    "id": "evt-002",
+    "title": "Pitch Perfect",
+    "category": "competition",
+    "date": "2024-02-28",
+    "location": "Lecture Hall",
+    "attendees": 150,
+    "description": "Pitch your startup idea to a panel of investors and industry experts. Win funding for your venture.",
+    "image": "🎯",
+    "status": "past",
+    "tags": ["Pitching", "Investment", "Mentoring"]
+  },
+  {
+    "id": "evt-003",
+    "title": "Entrepreneurship 101 Workshop",
+    "category": "workshop",
+    "date": "2025-02-10",
+    "location": "AB2 217",
+    "attendees": 80,
+    "description": "Learn the fundamentals of starting a business, from ideation to market validation and MVP development.",
+    "image": "📚",
+    "status": "past",
+    "tags": ["Workshop", "Beginners", "Learning"]
+  },
+  {
+    "id": "evt-004",
+    "title": "VC Meet & Greet",
+    "category": "networking",
+    "date": "2024-03-01",
+    "location": "Open Auditorium",
+    "attendees": 120,
+    "description": "Exclusive networking event with top venture capitalists and angel investors from across India.",
+    "image": "🤝",
+    "status": "past",
+    "tags": ["Networking", "Investors", "Exclusive"]
+  },
+  {
+    "id": "evt-005",
+    "title": "Design Thinking Bootcamp",
+    "category": "workshop",
+    "date": "2025-01-20",
+    "location": "Open Auditorium",
+    "attendees": 100,
+    "description": "Intensive 2-day bootcamp on design thinking methodology for product development.",
+    "image": "🎨",
+    "status": "past",
+    "tags": ["Design", "Product", "UX"]
+  },
+  {
+    "id": "evt-006",
+    "title": "Startup Expo 2024",
+    "category": "competition",
+    "date": "2024-04-05",
+    "location": "VIT Main Auditorium",
+    "attendees": 300,
+    "description": "Annual startup exhibition featuring the best student startups. Demo your product to thousands.",
+    "image": "🏆",
+    "status": "past",
+    "tags": ["Exhibition", "Demo Day", "Awards"]
+  }
+]
