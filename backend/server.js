@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 require('dotenv').config();
 
 const apiRoutes = require('./routes/api');
@@ -20,24 +19,21 @@ app.use((req, res, next) => {
   next();
 });
 
-// API Routes
-app.use('/api', apiRoutes);
-
-// Serve static files in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/build')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-  });
-}
-
-// Health check
+// Health check — must be BEFORE any catch-all
 app.get('/health', (req, res) => {
   res.status(200).json({
     status: 'OK',
-    message: 'StartUp CLub API is running!',
+    message: 'StartUp Club API is running!',
     timestamp: new Date().toISOString(),
   });
+});
+
+// API Routes
+app.use('/api', apiRoutes);
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({ success: false, error: 'Route not found' });
 });
 
 // Global error handler
@@ -49,11 +45,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-// For local development
+// For local development only
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
     console.log(`🚀 StartupVIT Server running on http://localhost:${PORT}`);
-    console.log(`📁 Data stored in: ./data/`);
   });
 }
 
