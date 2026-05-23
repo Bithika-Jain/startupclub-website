@@ -10,8 +10,7 @@ Built with **React.js**, **Node.js**, and **Express.js**, this platform showcase
 
 | | URL |
 |---|---|
-| **Frontend** | https://startupclub-website.vercel.app |
-| **Backend API** | https://startupclub-backend.vercel.app |
+| **Frontend** | [https://startupclub-website.vercel.app](https://startupclub-website.vercel.app/) |
 
 ### Verify Backend is Running
 
@@ -19,9 +18,8 @@ Open these URLs directly in your browser to confirm the backend is live:
 
 | Endpoint | URL | Expected Response |
 |---|---|---|
-| Health Check | https://startupclub-backend.vercel.app/health | `{"status":"OK","message":"StartUp Club API is running!"}` |
-| Events API | https://startupclub-backend.vercel.app/api/events | JSON array of all events |
-| Stats API | https://startupclub-backend.vercel.app/api/stats | JSON with club statistics |
+| Health Check | [https://startupclub-backend.vercel.app/health](https://startupclub-website-backend.vercel.app/health) | `{"status":"OK","message":"StartUp Club API is running!"}` |
+| Events API | [https://startupclub-backend.vercel.app/api/events](https://startupclub-website-backend.vercel.app/api/events) | JSON array of all events |
 
 ---
 
