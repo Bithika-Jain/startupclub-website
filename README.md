@@ -1,4 +1,4 @@
-# 🚀 StartupVIT - Official Club Website
+# 🚀 StartUp Club - Official Website
 
 A modern, responsive, and full-stack website for **StartUp Club** — VIT Bhopal's premier entrepreneurship and innovation club.
 
