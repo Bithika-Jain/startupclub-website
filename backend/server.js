@@ -49,7 +49,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 StartUp CLub Server running on http://localhost:${PORT}`);
-  console.log(`📁 Data stored in: ./data/`);
-});
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`🚀 StartupVIT Server running on http://localhost:${PORT}`);
+    console.log(`📁 Data stored in: ./data/`);
+  });
+}
+
+// Export for Vercel
+module.exports = app;
