@@ -1,4 +1,4 @@
-# 🚀 StartUp Club - Official Website
+#  StartUp Club - Official Website
 
 A modern, responsive, and full-stack website for **StartUp Club** — VIT Bhopal's premier entrepreneurship and innovation club.
 
@@ -6,7 +6,7 @@ Built with **React.js**, **Node.js**, and **Express.js**, this platform showcase
 
 ---
 
-# 🌐 Live Deployment
+#  Live Deployment
 
 | | URL |
 |---|---|
@@ -23,39 +23,39 @@ Open these URLs directly in your browser to confirm the backend is live:
 
 ---
 
-# 📸 Features
+#  Features
 
-## ✅ Core Features
+##  Core Features
 
-- ⚛️ React.js frontend with component-based architecture
-- 📱 Fully responsive design (Mobile, Tablet, Laptop, Desktop)
-- 🎨 Modern UI with gradients, glassmorphism, and smooth transitions
-- 🧭 Sticky navigation bar with smooth scrolling
-- 🦸 Hero section with animated elements
-- 📊 Multiple interactive sections
-- 🦶 Professional footer with newsletter integration
-
----
-
-## 🌟 Bonus Features
-
-- 🖥️ Node.js + Express backend
-- 🔗 REST API integration using Axios
-- 🎬 Framer Motion animations
-- 🌓 Dark / Light theme toggle
-- 🎯 Creative UI/UX
-- 🔢 Animated counters and statistics
-- 🎠 Testimonials carousel
-- 🏷️ Event filtering system
-- 📨 Contact form API integration
-- 📧 Newsletter subscription API
-- ⚡ Smooth scrolling navigation
-- ♿ Accessibility support
-- 🌐 Deployed on Vercel (frontend + backend separately)
+-  React.js frontend with component-based architecture
+-  Fully responsive design (Mobile, Tablet, Laptop, Desktop)
+-  Modern UI with gradients, glassmorphism, and smooth transitions
+-  Sticky navigation bar with smooth scrolling
+-  Hero section with animated elements
+-  Multiple interactive sections
+-  Professional footer with newsletter integration
 
 ---
 
-# 🛠️ Tech Stack
+##  Bonus Features
+
+-  Node.js + Express backend
+-  REST API integration using Axios
+-  Framer Motion animations
+-  Dark / Light theme toggle
+-  Creative UI/UX
+-  Animated counters and statistics
+-  Testimonials carousel
+-  Event filtering system
+-  Contact form API integration
+-  Newsletter subscription API
+-  Smooth scrolling navigation
+-  Accessibility support
+-  Deployed on Vercel (frontend + backend separately)
+
+---
+
+#  Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -69,7 +69,7 @@ Open these URLs directly in your browser to confirm the backend is live:
 
 ---
 
-# 📂 Complete Project Structure
+#  Complete Project Structure
 
 ```plaintext
 startupvit-website/
@@ -119,9 +119,9 @@ startupvit-website/
 
 ---
 
-# 🚀 Getting Started (Local Development)
+#  Getting Started (Local Development)
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Node.js >= 16.x
 - npm >= 8.x
@@ -133,23 +133,23 @@ npm -v
 
 ---
 
-## 📥 Installation
+##  Installation
 
-### 1️⃣ Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/Bithika-Jain/startupclub-website.git
 cd startupclub-website
 ```
 
-### 2️⃣ Install Backend Dependencies
+### 2️. Install Backend Dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
-### 3️⃣ Install Frontend Dependencies
+### 3️. Install Frontend Dependencies
 
 ```bash
 cd ../frontend
@@ -158,7 +158,7 @@ npm install
 
 ---
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 Create a `.env` file inside the `backend` folder:
 
@@ -168,7 +168,7 @@ PORT=5000
 
 ---
 
-## ▶️ Running Locally
+##  Running Locally
 
 ### Start Backend
 
@@ -190,7 +190,7 @@ Frontend runs on: `http://localhost:3000`
 
 ---
 
-# 📡 API Endpoints
+#  API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -205,7 +205,7 @@ Frontend runs on: `http://localhost:3000`
 
 ---
 
-# 🔗 Backend Integration
+#  Backend Integration
 
 The frontend communicates with the backend using **Axios**:
 
@@ -217,7 +217,7 @@ axios.post('/api/newsletter', emailData)
 
 ---
 
-# 🌐 Deployment (Vercel)
+#  Deployment (Vercel)
 
 This project is deployed as **two separate Vercel projects** for reliability.
 
@@ -238,7 +238,7 @@ This project is deployed as **two separate Vercel projects** for reliability.
 
 ---
 
-# 🎨 UI/UX Design Decisions
+#  UI/UX Design Decisions
 
 ## Color Palette
 
@@ -264,7 +264,7 @@ This project is deployed as **two separate Vercel projects** for reliability.
 
 ---
 
-# 📱 Responsive Breakpoints
+#  Responsive Breakpoints
 
 | Breakpoint | Device |
 |---|---|
@@ -275,13 +275,13 @@ This project is deployed as **two separate Vercel projects** for reliability.
 
 ---
 
-## 📝 Note on Data Persistence
+##  Note on Data Persistence
 
 The backend uses JSON file storage which works perfectly in local development. On Vercel (serverless), file writes are ephemeral — contact form submissions and newsletter signups are stored in memory per instance. For persistent production storage, MongoDB Atlas integration is planned.
 
 ---
 
-# 🧪 Future Improvements
+#  Future Improvements
 
 - MongoDB database integration
 - Authentication system
@@ -293,13 +293,13 @@ The backend uses JSON file storage which works perfectly in local development. O
 
 ---
 
-# 📄 License
+#  License
 
 This project is licensed under the MIT License.
 
 ---
 
-# 🙏 Acknowledgements
+#  Acknowledgements
 
 - React.js
 - Node.js
